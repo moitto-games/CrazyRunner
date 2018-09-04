@@ -1,0 +1,5 @@
+=begin home
+
+=object web: filename="html/index.html", style=web_game
+
+=end home
