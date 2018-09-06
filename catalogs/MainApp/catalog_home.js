@@ -19,6 +19,9 @@ function finish_quest() {
     controller.catalog().submit("showcase", "auxiliary", "S_QUEST_DONE", {
         "score":__score.toString(),
         "has-own-sbml":"yes"
+    }, function(result) {
+        timeout(1, function() {
+            controller.action("popup", { "display-unit":"S_QUEST_DONE" });
+        });
     });
-    controller.action("popup", { "display-unit":"S_QUEST_DONE" });
 }
