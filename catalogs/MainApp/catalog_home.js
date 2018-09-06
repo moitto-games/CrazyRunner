@@ -16,6 +16,7 @@ function on_finish(data) {
 }
 
 function finish_quest() {
+    console.log("score: " + __score.toString());
     controller.catalog().submit("showcase", "auxiliary", "S_QUEST_DONE", {
         "score":__score.toString(),
         "has-own-sbml":"yes"
