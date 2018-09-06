@@ -148,7 +148,8 @@ API.start_quest = function(params, handler) {
 API.finish_quest = function(params, handler) {
     API.__request_call("finish_quest", Object.assign({
         "author":params["author"],
-        "permlink":params["permlink"]
+        "permlink":params["permlink"],
+        "comment":params["comment"]
     }, handler));
 }
 

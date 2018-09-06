@@ -1,0 +1,16 @@
+import themes.sbss
+
+#text_comment: width=1pw-(100dp+1sbh+1ebh), height=1ph-60dp, \
+        font-family=$SANSSERIF_MEDIUM, font-size=1.6, \
+        text-color=$WHITE_COLOR, cursor-color=$WHITE_COLOR, \
+        shrinks-on-keyboard=yes, content-background-color=$THEME_COLOR_05
+
+#btn_done: width=100dp, height=30dp, \
+        position=abs, gravity=top-right, x=-(100dp+1sbh+1ebh)/2, y=10dp, \
+        label-font-family=$SANSSERIF_MEDIUM, label-size=1.2, \
+        content-background-color=$THEME_COLOR_03
+
+/popup: scrolls-on-keyboard=no, page-background-color=$BLACK_COLOR_DEEPEST_DIM
+/popup/comment: padding="10dp (100dp+1sbh+1ebh)/2", \
+        font-family=$SANSSERIF_MEDIUM, text-color=$WHITE_COLOR
+/popup/comment/message: margin="10dp 0", font-size=1.2

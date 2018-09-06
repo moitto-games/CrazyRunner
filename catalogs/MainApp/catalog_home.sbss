@@ -3,4 +3,4 @@ import themes.sbss
 #web_game: width=1pw, height=1ph, position=abs, gravity=center, uses-local-server=yes, \
         content-background-color=$TRANSPARENT_COLOR
 
-/home: page-background-color=$THEME_COLOR_02
+/home: page-background-color=$THEME_COLOR_02, script-when-loaded=on_loaded
