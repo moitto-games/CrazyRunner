@@ -1,5 +1,5 @@
 function done() {
-    var comment = __comment_with_score(parseInt(view.object("comment").value(), $data["score"]));
+    var comment = __comment_with_score(view.object("comment").value(), parseInt($data["score"]));
 
     controller.action("script", {
         "script":"finish_quest",
