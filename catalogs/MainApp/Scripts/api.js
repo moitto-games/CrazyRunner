@@ -172,11 +172,13 @@ API.__request_call = function(script, params, handler) {
             "app":"__MAIN__",
             "routes-to-topmost":"no",
             "request-id":request_id,
-            "return-script":"API.on_complete",
+            "return-script":handler ? "API.on_complete" : "",
             "return-subview":$data["SUBVIEW"]
         }, params));
 
-        API.__handlers[request_id] = handler;
+        if (handler) {
+            API.__handlers[request_id] = handler;
+        }
 
         return;
     }
