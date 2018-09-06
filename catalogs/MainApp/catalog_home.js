@@ -12,7 +12,3 @@ function on_finish(data) {
 function finish_quest() {
     controller.action("popup", { "display-unit":"S_QUEST_DONE" });
 }
-
-function on_loaded() {
-    controller.action("popup", { "display-unit":"S_QUEST_DONE" });
-}
