@@ -5,7 +5,7 @@
 점수와 함께 남길 한마디:
 =end message
 
-=object text: id=text.comment, style=text_comment
+=object text: id=comment, style=text_comment
 =end comment
 
 =object button: script=done, label="퀘스트 종료", style=btn_done
