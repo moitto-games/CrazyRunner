@@ -22,7 +22,9 @@ function finish_quest(data) {
         "author":__quest_author, 
         "permlink":__quest_permlink,
         "comment":data["comment"]
+    }, function(result) {
+        timeout(1, function() {
+            controller.action("app-close");
+        });
     });
-
-    controller.action("app-close");
 }
