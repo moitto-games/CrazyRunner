@@ -4,6 +4,12 @@ API = (function() {
     };
 })();
 
+API.query_account = function(params, handler) {
+    API.__request_call("query_account", {
+        /* nothing */
+    }, handler);
+}
+
 API.open_discussion = function(params, handler) {
     API.__request_call("open_discussion", {
         "author":params["author"],
@@ -173,7 +179,7 @@ API.__request_call = function(script, params, handler) {
             "routes-to-topmost":"no",
             "request-id":request_id,
             "return-script":handler ? "API.on_complete" : "",
-            "return-subview":$data["SUBVIEW"]
+            "return-subview":$data["SUBVIEW"] || "__MAIN__"
         }, params));
 
         if (handler) {
