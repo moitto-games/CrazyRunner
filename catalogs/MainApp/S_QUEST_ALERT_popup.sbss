@@ -1,0 +1,29 @@
+import themes.sbss
+
+#section_popup: width=1pw, height=1ph, position=absolute, gravity=center
+#btn_confirm: height=50dp, \
+            label-font-family=$SANSSERIF_MEDIUM, label-color=$THEME_COLOR_100, \
+            content-background-color=$THEME_COLOR_00
+#blank_gap: width=20dp, height=50dp
+
+/popup: font-family=$SANSSERIF_MEDIUM, text-color=$WHITE_COLOR, page-background-color=$BLACK_COLOR_DEEPEST_DIM
+/popup/main: display=none
+/popup/main/note: display=block, position=absolute, gravity=center
+/popup/main/note/title: font-family=$SANSSERIF_BOLD, text-align=center, line-spacing=0.2em, paragraph-spacing=0.2em, line-break-mode=word-wrap
+/popup/main/note/notice: text-align=center, line-spacing=0.4em, paragraph-spacing=0.8em
+/popup/main/note/notice/sub: font-size=0.8em
+/popup/button: display=block, position=absolute, gravity=bottom, text-align=center
+
+if $SCREEN_WIDTH > "5"
+    #btn_confirm: width=(0.6pw-20dp)/2, label-font-size=1.2
+    /popup/main/note: width=0.6pw, y=-70dp
+    /popup/main/note/title: font-size=2.5, margin="0 0 40dp 0"
+    /popup/main/note/notice: font-size=1.5
+    /popup/button: y=-(1eb+80dp)
+else
+    #btn_confirm: width="(0.8pw-20dp)/2", label-font-size=1.1
+    /popup/main/note: y="1eb+20dp", y=-50dp, margin="0 0.1pw"
+    /popup/main/note/title: font-size=2, margin="0 0 20dp 0"
+    /popup/main/note/notice: font-size=1.3
+    /popup/button: y=-(1eb+20dp)
+end

@@ -1,0 +1,26 @@
+=begin popup
+
+=object section: section=note, style=section_popup
+
+=begin main: id=note
+
+=begin note
+=begin title
+12,000점
+=end title
+
+=begin notice
+퀘스트를 종료하시겠습니까?
+=begin sub
+퀘스트는 마지막 게임 점수로 기록됩니다.
+=end sub
+=end notice
+
+=end note
+=end main
+
+=begin button
+=(object button: action=popup-close, label="계속하기", style=btn_confirm)==(object blank: style=blank_gap)==(object button: action=popup-close, label="종료하기", style=btn_confirm)=
+=end button
+
+=end popup

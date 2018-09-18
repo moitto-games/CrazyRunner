@@ -1,4 +1,4 @@
-=begin home
+=begin home: guide-popup=S_QUEST_DONE, S_QUEST_ALERT, S_GUIDE_QUEST, , , , 
 
 =object web: filename="html/index.html", style=web_game
 

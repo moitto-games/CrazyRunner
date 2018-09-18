@@ -1,16 +1,28 @@
 import themes.sbss
 
-#text_comment: width=1pw-(100dp+1sbh+1ebh), height=1ph-60dp, \
-        font-family=$SANSSERIF_MEDIUM, font-size=1.6, \
-        text-color=$WHITE_COLOR, cursor-color=$WHITE_COLOR, \
-        shrinks-on-keyboard=yes, content-background-color=$THEME_COLOR_05
+#text_comment: font-family=$SANSSERIF_MEDIUM, \
+        text-color=$THEME_COLOR_100, cursor-color=$WHITE_COLOR, \
+        shrinks-on-keyboard=yes, content-background-color=$THEME_COLOR_00
 
 #btn_done: width=100dp, height=30dp, \
-        position=abs, gravity=top-right, x=-(100dp+1sbh+1ebh)/2, y=10dp, \
-        label-font-family=$SANSSERIF_MEDIUM, label-size=1.2, \
+        position=absolute, gravity=top-right, \
+        label-font-family=$SANSSERIF_MEDIUM, label-color=$THEME_COLOR_100, \
         content-background-color=$THEME_COLOR_03
 
+#label_notice: height=50dp, align=left, \
+		font-family=$SANSSERIF_LIGHT, text-color=$THEME_COLOR_102, text-align=left
+
 /popup: scrolls-on-keyboard=no, page-background-color=$BLACK_COLOR_DEEPEST_DIM
-/popup/comment: padding="10dp (100dp+1sbh+1ebh)/2", \
-        font-family=$SANSSERIF_MEDIUM, text-color=$WHITE_COLOR
-/popup/comment/message: margin="10dp 0", font-size=1.2
+/popup/comment: display=block, position=absolute, gravity=top
+
+if $SCREEN_WIDTH > "5"
+	#btn_done: width=100dp, height=40dp, x=-0.15pw, y=45dp, label-font-size=1.2
+	#label_notice: font-size=1.5
+	#text_comment: width=0.7pw, height="1ph-130dp-1eb", font-size=1.5
+	/popup/comment: width=0.7pw, height="1ph-40dp-1eb", y=40dp
+else
+	#btn_done: width=100dp, height=40dp, x=-0.1pw, y=25dp, label-font-size=1.1
+	#label_notice: font-size=1.3
+	#text_comment: width=0.8pw, height="1ph-90dp-1eb", font-size=1.3
+	/popup/comment: width=0.8pw, height="1ph-40dp-1eb", y=20dp
+end

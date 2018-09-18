@@ -1,0 +1,30 @@
+=begin popup
+
+=object section: section=note, style=section_popup
+
+=begin main: id=note
+
+=begin note
+=begin title
+CRAZY RUNNER
+=end title
+=begin notice
+=begin os: style=ios
+• 화면 왼쪽 모서리에서 화면을 오른쪽으로 밀면 디앱을 닫을 수 있습니다.
+=end os
+=begin os: style=android
+• 이전 버튼을 누르면 디앱을 닫을 수 있습니다.
+=end os
+• 퀘스트를 종료하지 않고 디앱을 닫으면,
+=begin list
+• 진행한 퀘스트는 기록되지 않습니다.
+• 퀘스트와 게임을 처음부터 다시 해야 합니다.
+=end list
+=end notice
+=end note
+
+=end main
+
+=object button: action=popup-close, label="확인", style=btn_confirm
+
+=end popup
