@@ -1,7 +1,7 @@
 import themes.sbss
 
 #text_comment: font-family=$SANSSERIF_MEDIUM, \
-        text-color=$THEME_COLOR_100, cursor-color=$WHITE_COLOR, \
+        text-color=$THEME_COLOR_100, cursor-color=$THEME_COLOR_100, \
         shrinks-on-keyboard=yes, content-background-color=$THEME_COLOR_00
 
 #btn_done: width=100dp, height=30dp, \
