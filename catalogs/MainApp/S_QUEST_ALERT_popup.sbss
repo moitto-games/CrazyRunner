@@ -16,14 +16,26 @@ import themes.sbss
 
 if $SCREEN_WIDTH > "5"
     #btn_confirm: width=(0.6pw-20dp)/2, label-font-size=1.2
-    /popup/main/note: width=0.6pw, y=-70dp
+    /popup/main/note: y=-70dp
     /popup/main/note/title: font-size=2.5, margin="0 0 40dp 0"
     /popup/main/note/notice: font-size=1.5
     /popup/button: y=-(1eb+80dp)
+    if $ORIENTATION == "portrait"
+        #btn_confirm: width=(0.8pw-20dp)/2
+        /popup/main/note: width=0.8pw, y=-100dp
+    elif $ORIENTATION == "landscape"
+        #btn_confirm: width=(0.6pw-20dp)/2
+        /popup/main/note: width=0.6pw, y=-70dp
+    end
 else
-    #btn_confirm: width="(0.8pw-20dp)/2", label-font-size=1.1
-    /popup/main/note: y="1eb+20dp", y=-50dp, margin="0 0.1pw"
+    #btn_confirm: width="(1pw-60dp)/2", label-font-size=1.1
+    /popup/main/note: margin="0 20dp"
     /popup/main/note/title: font-size=2, margin="0 0 20dp 0"
-    /popup/main/note/notice: font-size=1.3
+    /popup/main/note/notice: font-size=1.2
     /popup/button: y=-(1eb+20dp)
+    if $ORIENTATION == "portrait"
+        /popup/main/note: y=-100dp
+    elif $ORIENTATION == "landscape"
+        /popup/main/note: y=-50dp
+    end
 end

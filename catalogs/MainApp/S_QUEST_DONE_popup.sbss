@@ -4,25 +4,43 @@ import themes.sbss
         text-color=$THEME_COLOR_100, cursor-color=$THEME_COLOR_100, \
         shrinks-on-keyboard=yes, content-background-color=$THEME_COLOR_00
 
-#btn_done: width=100dp, height=30dp, \
+#btn_done: height=40dp, \
         position=absolute, gravity=top-right, \
         label-font-family=$SANSSERIF_MEDIUM, label-color=$THEME_COLOR_100, \
-        content-background-color=$THEME_COLOR_03
+        content-background-color=$THEME_COLOR_03, content-padding="0 10dp"
 
 #label_notice: height=50dp, align=left, \
-		font-family=$SANSSERIF_LIGHT, text-color=$THEME_COLOR_102, text-align=left
+		font-family=$SANSSERIF_MEDIUM, text-color=$THEME_COLOR_102, text-align=left
 
 /popup: scrolls-on-keyboard=no, page-background-color=$BLACK_COLOR_DEEPEST_DIM
 /popup/comment: display=block, position=absolute, gravity=top
 
 if $SCREEN_WIDTH > "5"
-	#btn_done: width=100dp, height=40dp, x=-0.15pw, y=45dp, label-font-size=1.2
+	#btn_done: y=45dp, label-font-size=1.2
 	#label_notice: font-size=1.5
-	#text_comment: width=0.7pw, height="1ph-130dp-1eb", font-size=1.5
-	/popup/comment: width=0.7pw, height="1ph-40dp-1eb", y=40dp
+	#text_comment: font-size=1.5
+	/popup/comment: y=40dp
+    if $ORIENTATION == "portrait"
+		#btn_done: x=-0.1pw
+		#text_comment: width=0.8pw, height="1ph-150dp-1eb"
+		/popup/comment: width=0.8pw, height="1ph-60dp-1eb"
+    elif $ORIENTATION == "landscape"
+		#btn_done: x=-0.1pw
+		#text_comment: width=0.7pw, height="1ph-130dp-1eb"
+		/popup/comment: width=0.7pw, height="1ph-40dp-1eb"
+    end
 else
-	#btn_done: width=100dp, height=40dp, x=-0.1pw, y=25dp, label-font-size=1.1
-	#label_notice: font-size=1.3
-	#text_comment: width=0.8pw, height="1ph-90dp-1eb", font-size=1.3
-	/popup/comment: width=0.8pw, height="1ph-40dp-1eb", y=20dp
+	#btn_done: y=25dp, label-font-size=1.1
+	#label_notice: font-size=1.2
+	#text_comment: height="1ph-90dp-1eb", font-size=1.3
+	/popup/comment: height="1ph-40dp-1eb", y=20dp
+    if $ORIENTATION == "portrait"
+		#btn_done: x=-20dp
+		#text_comment: width="1pw-40dp"
+		/popup/comment: width="1pw-40dp"
+    elif $ORIENTATION == "landscape"
+		#btn_done: x=-0.1pw
+		#text_comment: width=0.8pw
+		/popup/comment: width=0.8pw
+    end
 end

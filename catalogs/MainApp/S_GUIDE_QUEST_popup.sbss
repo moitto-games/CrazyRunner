@@ -13,16 +13,29 @@ import themes.sbss
 /popup/main/note/notice/list: margin="0 0 0 1em"
 
 if $SCREEN_WIDTH > "5"
-    #btn_confirm: width=0.6pw, y=-(1eb+80dp), label-font-size=1.2
-    /popup/main/note: width=0.6pw, y="1eb+80dp"
+    #btn_confirm: y=-(1eb+80dp), label-font-size=1.2
     /popup/main/note/title: font-size=2.5, margin="0 0 40dp 0"
     /popup/main/note/notice: font-size=1.2
+    if $ORIENTATION == "portrait"
+        #btn_confirm: width=0.8pw
+        /popup/main/note: width=0.7pw, y="1eb+140dp"
+    elif $ORIENTATION == "landscape"
+        #btn_confirm: width=0.6pw
+        /popup/main/note: width=0.6pw, y="1eb+80dp"
+    end
 else
-    #btn_confirm: width=0.8pw, y=-(1eb+20dp), label-font-size=1.1
-    /popup/main/note: y=40dp, margin="0 0.1pw"
+    #btn_confirm: y=-(1eb+20dp), label-font-size=1.1
     /popup/main/note/title: font-size=2, margin="0 0 20dp 0"
     /popup/main/note/notice: font-size=1.1
+    if $ORIENTATION == "portrait"
+        #btn_confirm: width="1pw-40dp"
+        /popup/main/note: y=80dp, margin="0 30dp"
+    elif $ORIENTATION == "landscape"
+        #btn_confirm: width=0.8pw, margin="0 0.1pw"
+        /popup/main/note: y=40dp
+    end
 end
+
 
 if $OS == "iOS"
     #android: display=none
