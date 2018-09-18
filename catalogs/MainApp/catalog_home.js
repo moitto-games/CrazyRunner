@@ -3,7 +3,7 @@ var __score = 0;
 function on_finish(data) {
     if (document.value("QUEST_MODE")) {
         controller.catalog().submit("showcase", "auxiliary", "S_QUEST_ALERT", {
-            "score":data["score"]
+            "score":data["score"],
             "has-own-sbml":"yes"
         });
         controller.action("popup", { "display-unit":"S_QUEST_ALERT" });
